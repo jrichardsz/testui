@@ -1,7 +1,8 @@
+```
 mvn -Dintegration.base.url=http://www.google.ie -Pintegration verify
+```
 
-
-Introduction
+# Introduction
 
 The dependencies page lists all the jars that you will need to have in your classpath.
 
@@ -28,7 +29,7 @@ public void homePage() throws Exception {
 }
 ```
 
-Imitating a specific browser
+# Imitating a specific browser
 
 Often you will want to simulate a specific browser. This is done by passing a com.gargoylesoftware.htmlunit.BrowserVersion into the WebClient constructor. Constants have been provided for some common browsers but you can create your own specific version by instantiating a BrowserVersion.
 
@@ -45,7 +46,7 @@ public void homePage_Firefox() throws Exception {
 
 Specifying this BrowserVersion will change the user agent header that is sent up to the server and will change the behavior of some of the JavaScript.
 
-Finding a specific element
+# Finding a specific element
 
 Once you have a reference to an HtmlPage, you can search for a specific HtmlElement by one of 'get' methods, or by using XPath.
 
@@ -81,7 +82,7 @@ public void xpath() throws Exception {
 }
 ```
 
-Using a proxy server
+# Using a proxy server
 
 The last WebClient constructor allows you to specify proxy server information in those cases where you need to connect through one.
 
@@ -103,7 +104,7 @@ public void homePage_proxy() throws Exception {
 
 Specifying this BrowserVersion will change the user agent header that is sent up to the server and will change the behavior of some of the JavaScript.
 
-Submitting a form
+# Submitting a form
 
 Frequently we want to change values in a form and submit the form back to the server. The following example shows how you might do this.
 
@@ -132,6 +133,7 @@ public void submittingForm() throws Exception {
 }
 ```
 
+# Tables
 
 The first set of examples will use this simple html.
 
@@ -225,5 +227,3 @@ Every table may optionally have a caption element which describes it.
 ```
 final String caption = table.getCaptionText()
 ```
-
-
